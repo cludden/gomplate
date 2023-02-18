@@ -231,6 +231,7 @@ func createIAMLoginVars() (map[string]interface{}, error) {
 	for _, v := range []string{"VAULT_AUTH_AWS_REGION", "AWS_REGION", "AWS_DEFAULT_REGION"} {
 		if r := env.Getenv(v); v != "" {
 			region = r
+			break
 		}
 	}
 
